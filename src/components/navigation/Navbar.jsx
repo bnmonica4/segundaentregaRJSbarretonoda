@@ -1,18 +1,17 @@
 import { Link } from 'react-router-dom';
 
-export default function Navbar() {
-
+export default function NavBar() {
     return (
         <>
-            <div style={{marginBooton: 30, display:'flex', gap:10}}>
+            <div style={{ marginBottom: 30, display:'flex', gap: 10 }}>
                 <button>
-                    <link to={'/'}>Home</link>
+                    <Link to={'/'}>Home</Link>
                 </button>
                 <button>
-                    <link to={'/products'}>Products</link>
+                    <Link to={'/products'}>Products</Link>
                 </button>
                 <button>
-                    <link to={'/Contact'}>Contact</link>
+                    <Link to={'/contact'}>Contact</Link>
                 </button>
             </div>
         </>
