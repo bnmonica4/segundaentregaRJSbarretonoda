@@ -5,11 +5,11 @@ import { getProduct } from '../../asyncMock';
 export default function SingleProduct() {
     const { prodId } = useParams();
 
-    const [product, setProduct] = useState({})
+    const [product, setProduct] = useState({});
 
-    useEffect(()=>{
-        setProduct(getProduct(prodId))
-    },[prodId])
+    useEffect(() => {
+        setProduct(getProduct(prodId));
+    }, [prodId]);
 
     return (
     <>
@@ -18,6 +18,7 @@ export default function SingleProduct() {
             <h3>Nombre: {product.title}</h3>
             <img src={product.image} alt={product.title} />
             <p>{product.description}</p>
+            <p>{product.color}</p>
             <p>{product.category}</p>
             <p>Precio $ {product.price}</p>
         </div>

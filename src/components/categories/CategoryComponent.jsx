@@ -5,7 +5,7 @@ import {useEffect, useState} from 'react'
 export default function CategoryComponent() {
     const { catName } = useParams();
 
-    const [products, setProducts] = useState([]);
+    const [products, setProducts] = useState([])
 
     useEffect(()=>{
         getProducts.then(data => setProducts(data))

@@ -9,7 +9,7 @@ export default function ProductsComponent() {
 
     useEffect(() => {
         getProducts.then((data) => setProducts(data));
-    });
+    }, []);
 
     const handleClick = (id) => {
         navigate(`/product/${id}`);
@@ -20,8 +20,19 @@ export default function ProductsComponent() {
             <div>
                 <h1>Ropa deportiva para damas</h1>
                 <section style={{ display: 'flex', gap: 10 }}>
+                    {
+                    products.map((product) => (
+                        <article 
+                        key={product.id} 
+                        style={{border:'1px solid white', padding: 10 }}
+                        >
+                            <h4>{product.title}</h4>
+                            <img src={product.image} alt={product.title} />
+                            <p>Price $ {product.price}</p>
+                            <button onClick={()=>handleClick(product.id)}>Ver más</button>
+                        </article>
+                    ))}
                 </section>
-                <button onClick={handleClick}>Ver más</button>
             </div>
         </>
     );
