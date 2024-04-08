@@ -45,7 +45,7 @@ const products = [
     image: 'https://www.pexels.com/es-es/foto/mujer-en-sudadera-con-capucha-gris-de-pie-junto-a-la-pared-de-madera-marron-6311317/',
 },
 {
-    id: 20,
+    id: 24,
     title: 'zapatos Nike',
     price: '100',
     category: 'zapatos',
